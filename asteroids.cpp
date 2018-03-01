@@ -1,7 +1,7 @@
 //
 //
 //
-//
+//modified by : Erik Soto
 //program: asteroids.cpp
 //author:  Gordon Griesel
 //date:    2014 - 2018
@@ -24,6 +24,8 @@ using namespace std;
 #include <GL/glx.h>
 #include "log.h"
 #include "fonts.h"
+
+#include "erikS.cpp"
 
 //defined types
 typedef float Flt;
@@ -736,11 +738,11 @@ void physics()
 
 void render()
 {
+    	showName();
+
 	Rect r;
-	glClear(GL_COLOR_BUFFER_BIT);
-	//
-	r.bot = gl.yres - 20;
-	r.left = 10;
+	r.bot = gl.yres -20;
+	r.left =10;
 	r.center = 0;
 	ggprint8b(&r, 16, 0x00ff0000, "3350 - Asteroids");
 	ggprint8b(&r, 16, 0x00ffff00, "n bullets: %i", g.nbullets);
